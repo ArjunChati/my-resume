@@ -1,0 +1,117 @@
+\documentclass[10pt, letterpaper]{article}
+\usepackage[left=0.3in, right=0.3in, top=0.35in, bottom=0.35in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    pdftitle={Arjun Chati Resume},
+}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{4pt}{2pt}
+
+\newcommand{\datedsubsection}[2]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}%
+}
+\newcommand{\worksubsection}[3]{%
+  \noindent\textbf{#1} $|$ \textit{#2} \hfill \textbf{#3}%
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% HEADER
+\begin{center}
+    {\Huge \textbf{Arjun Chati}} \\ \vspace{2pt}
+    (732) 894-6608 $|$ \href{mailto:arjun.chati@gmail.com}{arjun.chati@gmail.com} $|$ \href{https://linkedin.com/in/arjun-chati/}{linkedin.com/in/arjun-chati/} $|$ \href{https://github.com/ArjunChati}{github.com/ArjunChati}
+\end{center}
+
+% EDUCATION
+\section*{Education}
+\noindent\textbf{The University of Texas at Austin - Cockrell School of Engineering} \hfill \textbf{Graduating May 2027}\\
+\textit{B.S Electrical \& Computer Engineering, Minor in Semiconductor Science}\\
+\textbf{Relevant Coursework:} Electronics Design Lab, Linear Systems/Signals, Digital Logic Design, Circuit Theory, Embedded Systems, Electromagnetic Engineering, Software Design, Engineering Physics 2, Design with AI
+
+% PROFESSIONAL EXPERIENCE
+\section*{Professional Experience}
+\worksubsection{Undergraduate Research Assistant}{Akinwande Nano Research Group, UT Austin, TX}{February 2026 -- Present}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Developing an automated synthesis pipeline to map S-parameter data into RLC Foster Networks for wearable medical devices
+    \item Synthesized broadband dielectric circuit models for skin layers by applying 4-dispersion Cole-Cole equations from 0.5 to 110 GHz
+    \item Leveraging vector fitting algorithms in MATLAB to condense dielectric responses into causal, passive, simulation-ready netlists
+    \item Integrated SPICE-compatible subcircuits into Cadence Virtuoso and Synopsys HSPICE to facilitate performance verification
+\end{itemize}
+
+\vspace{4pt}
+\worksubsection{Hardware Research \& Design Team Lead}{Texas Aerial Robotics, Austin, TX}{September 2024 -- Present}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Designed power distribution PCBs and BECs in Altium; validated stability and efficiency using SPICE simulations
+    \item Engineered a high-current MOSFET trigger circuit for medical payload actuation in UAV systems for competition settings
+    \item Integrated RTK-GPS and telemetry modules, resolving RF interference and signal integrity issues for long range flight
+    \item Directed fabrication in SolidWorks, enforcing DFM standards on custom frames and landing gear for 20+ assemblies
+\end{itemize}
+
+\vspace{4pt}
+\worksubsection{Systems Engineering Intern}{BarBoards, Austin, TX}{May 2025 -- September 2025}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Integrated NVIDIA Jetson modules in a proprietary SOM for live computer-vision workloads on embedded displays
+    \item Deployed real-time NLP applications to 300+ production and bar venues, optimizing API latency and reliability at scale
+    \item Containerized React/Supabase backend with Docker, reducing deployment friction and enabling CI/CD-based releases
+    \item Coordinated firmware integration across hardware and software teams with version control and release workflows
+\end{itemize}
+
+% PROJECTS
+\section*{Projects}
+\noindent\textbf{High-Speed x86 Carrier Board Design \& Bring-Up (Intel N100) in KiCad} \hfill \textbf{January 2026}
+\vspace{-1pt}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Architected a custom Intel N100 carrier board, routing USB 3.0, HDMI, Ethernet with 90 Ohm differential impedances
+    \item Optimized signal integrity via custom stack-up planning and skew matching to minimize phase jitter and crosstalk
+    \item Designed a multi-rail Power Delivery Network using ESD protection and transient suppression for noise immunity
+    \item Executed full board bring-up and power sequencing validation, performing hot-air rework on buck converters in the lab
+    \item Validated manufacturability via DFM/DFA analysis to resolve yield issues and generated Gerber fabrication files
+\end{itemize}
+
+\vspace{4pt}
+\noindent\textbf{RTL Implementation of 32-bit Custom RISC Processor in Verilog} \hfill \textbf{November 2025}
+\vspace{-1pt}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Developed a 32-bit RISC-style CPU in Verilog featuring a multi-cycle FSM unit (IF, ID, EX, Delay, Halt) and 16-bit data path
+    \item Designed a custom ISA and ALU supporting 27+ opcodes, including specialized 32-bit multiplication via SGPR
+    \item Implemented hardware-level control logic for branching based on status flags: Carry, Zero, Sign, and Overflow
+    \item Verified RTL integrity with testbenches in Vivado to validate memory synchronization and corner-case accuracy
+\end{itemize}
+
+\vspace{4pt}
+\noindent\textbf{Embedded System Game Controller in ARM/C} \hfill \textbf{May 2025}
+\vspace{-1pt}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Built a game device with the MSPM0+ and a custom PCB, interfacing LCD over SPI/I\textsuperscript{2}C alongside multiple analog inputs
+    \item Leveraged oscilloscopes, multimeters, waveform generators, and other lab tools to test early builds of the project
+    \item Integrated audio and user-input peripherals to add analog control and real-time feedback to the game platform
+\end{itemize}
+
+\vspace{4pt}
+\noindent\textbf{Mixed-Signal EQ Module for Music Recording} \hfill \textbf{February 2025}
+\vspace{-1pt}
+\begin{itemize}[leftmargin=0.1in, noitemsep, topsep=0pt, itemsep=1pt, parsep=0pt]
+    \item Implemented a 5-bit DAC \& ADC in C using the TI Cortex-M0+ to process audio signal dynamics for mono speakers
+    \item Tested and Designed RLC signal filters with MOSFETS using LTSpice simulation for anti-aliasing in audio recording
+    \item Utilized these custom filter circuits in real-time music production workflows as alternatives to digital plug-in racks
+\end{itemize}
+
+% SKILLS
+\section*{Skills}
+\noindent\textbf{Engineering/Development Programs:} Xilinx Vivado, Autodesk Fusion, Altium, KiCad, LTSpice, Ansys, SolidWorks 25, JUCE\\
+\textbf{Software Languages:} Verilog, C/C++, Python, Java, HTML/CSS/JS \& Typescript, ARM-O Assembly, Wolfram\\
+\textbf{Organizations:} HRT Directed Independent Reading Program (DIRP), Texas Aerial Robotics, IEEE, IEEE RAS
+
+\end{document}
